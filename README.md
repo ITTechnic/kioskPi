@@ -67,9 +67,12 @@ Name[en_US]=AutoChromium
 Name=AutoChromium
 Comment=Start Chromium when GNOME starts
 ```
-
 Ref: http://raspberrypi.stackexchange.com/questions/38515/auto-start-chromium-on-raspbian-jessie-11-2015
 
+If you want the URLs to remain in the script, simply append the full URLs: -
+```
+Exec=/usr/bin/chromium-browser --arguements http://www.bbc.co.uk http://cheese.com
+```
 ## To put into portrait mode
 
 Add the following at the bottom of the file `/boot/config.txt`
