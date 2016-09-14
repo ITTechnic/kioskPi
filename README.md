@@ -17,9 +17,9 @@ Ref http://raspberrypi.stackexchange.com/questions/41603/installing-chrome-on-ra
 
 
 ## Set up Chromium
-Go to `Settings > On start-up' and select `Open a specific page or set of pages` and add your URLs to the list.
+Go to `Settings > On start-up` and select `Open a specific page or set of pages` and add your URLs to the list.
 
-If using multiple pages, use a tab rotator extension which needs to be configurated to run at start up, for example `TabCarousel`.  Adjust the timings for the rotation as necessary.
+If using multiple pages, use a tab rotator extension which needs to be configurated to run at start up, for example `TabCarousel` https://chrome.google.com/webstore/detail/tabcarousel/ddldimidiliclngjipajmjjiakhbcohn?hl=en and adjust the timings for the rotation as necessary.
 
 
 ## Install MS Core Fonts
@@ -37,9 +37,10 @@ BLANK_TIME=0
 POWERDOWN_TIME=0
 ```
 
-Disable Xsession from blanking by adding these lines to `/etc/xdg/lxsession/LXDE/autostart`
+Disable Xsession from blanking by adding these lines to `/etc/xdg/lxsession/LXDE/autostart` and commenting out the xscreensaver option
 
 ```
+#@xscreensaver -no-splash
 @xset s noblank 
 @xset s off 
 @xset -dpms
@@ -78,11 +79,24 @@ display_rotate=3
 ```
 Ref: https://www.raspberrypi.org/forums/viewtopic.php?f=108&t=120793
 
+## Hide mouse cursor
+
+Install unclutter
+
+```
+$ sudo apt-get install unclutter
+```
+
+
+
 
 ## Enable SSH
 Use SSH to remotely connect to the Pi if needed.
 
 Enter `sudo raspi-config` in the terminal, then navigate to ssh, hit Enter and select Enable or Disable ssh server.
 
-If testing your setup and wish to launch chromium remotely, don't forget the command `export DISPLAY=:0`
+Connect using `pi@192.168.xx.xxx` and the default password is `raspberry`, obviously putting in your own details.
+
+
+If testing you are setup and wish to launch chromium remotely, don't forget the command `export DISPLAY=:0`
 
