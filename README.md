@@ -16,7 +16,7 @@ $ sudo dpkg -i chromium-browser-l10n_45.0.2454.85-0ubuntu0.15.04.1.1181_all.deb 
 Ref http://raspberrypi.stackexchange.com/questions/41603/installing-chrome-on-raspbian
 
 
-## Set up Chromium
+## Set up Chromium within UI - Optional
 Go to `Settings > On start-up` and select `Open a specific page or set of pages` and add your URLs to the list.
 
 If using multiple pages, use a tab rotator extension which needs to be configurated to run at start up, for example `TabCarousel` https://chrome.google.com/webstore/detail/tabcarousel/ddldimidiliclngjipajmjjiakhbcohn?hl=en and adjust the timings for the rotation as necessary.
