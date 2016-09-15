@@ -37,7 +37,7 @@ BLANK_TIME=0
 POWERDOWN_TIME=0
 ```
 
-Disable Xsession from blanking by adding these lines to `/etc/xdg/lxsession/LXDE/autostart` and commenting out the xscreensaver option
+Disable Xsession from blanking by adding these lines to `/etc/xdg/lxsession/LXDE-pi/autostart` and commenting out the xscreensaver option
 
 ```
 #@xscreensaver -no-splash
@@ -47,6 +47,17 @@ Disable Xsession from blanking by adding these lines to `/etc/xdg/lxsession/LXDE
 ```
 
 Ref: https://www.raspberrypi.org/forums/viewtopic.php?t=57552
+
+
+A better way is to install xscreensaver and disable through the UI
+
+```
+$ sudo apt-get update
+$ sudo apt-get install xscreensaver
+```
+Jump to the screensaver settings and disable.
+
+Ref: http://raspberrypi.stackexchange.com/questions/2059/disable-screen-blanking-in-x-windows-on-raspbian
 
 
 ## To make the Chromium auto-start
