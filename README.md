@@ -114,3 +114,32 @@ Connect using `pi@192.168.xx.xxx` and the default password is `raspberry`, obvio
 
 If testing you are setup and wish to launch chromium remotely, don't forget the command `export DISPLAY=:0`
 
+
+
+
+## Update the Hostname
+
+```
+$ sudo nano /etc/hosts
+```
+Change `127.0.1.1       raspberrypi` to `127.0.1.1       kioskpi`, or whatever you want it to be called.
+
+```
+$ sudo nano /etc/hostname
+```
+Change from `raspberrypi` to `kioskpi`, to match the above change.
+
+Now commit the changes, then reboot
+
+```
+$ sudo nano /etc/init.d/hostname.sh 
+$ sudo reboot
+```
+
+Now check all is working
+
+```
+$ ssh pi@kioskpi
+```
+
+If not, add to your local hosts file
