@@ -91,6 +91,10 @@ Add the following at the bottom of the file `/boot/config.txt`
 ```
 display_rotate=3
 ```
+
+Uncomment `disable_overscan=1` if you have a black border.
+Uncomment `hdmi_drive=2` to force audio over HDMI if needed.
+
 Ref: https://www.raspberrypi.org/forums/viewtopic.php?f=108&t=120793
 
 ## Hide mouse cursor
