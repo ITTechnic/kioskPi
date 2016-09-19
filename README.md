@@ -95,6 +95,8 @@ display_rotate=3
 Uncomment `disable_overscan=1` if you have a black border.
 Uncomment `hdmi_drive=2` to force audio over HDMI if needed.
 
+For full config check modes here :- https://www.raspberrypi.org/documentation/configuration/config-txt.md
+
 Ref: https://www.raspberrypi.org/forums/viewtopic.php?f=108&t=120793
 
 ## Hide mouse cursor
