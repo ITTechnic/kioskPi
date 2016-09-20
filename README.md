@@ -149,3 +149,29 @@ $ ssh pi@kioskpi
 ```
 
 If not, add to your local hosts file
+
+
+## Nighty Night
+
+To turn off the display, run the following: -
+```
+/opt/vc/bin/tvservice -p; /opt/vc/bin/tvservice -o
+```
+
+To turn the display back on, run the following: -
+```
+/opt/vc/bin/tvservice -p ; sudo chvt 6; sudo chvt 7
+```
+
+To create a schedule to turn off the display at night and back on in the morning, create a `crontab`. 
+```
+$ crontab -e
+```
+
+For example, a schedule for Monday to Friday: -
+```
+# minute   hour   day of month     month   day of week       command
+#  0-59    0-23   1-31             1-12    0-7 (0/7 is Sun) 
+30         17     *                *       *                 /opt/vc/bin/tvservice -p ; /opt/vc/bin/tvservice -o
+30         7      *                *       1-5               /opt/vc/bin/tvservice -p ; sudo chvt 6; sudo chvt 7
+```
