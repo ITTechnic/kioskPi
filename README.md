@@ -3,6 +3,15 @@ Configure a Raspberry Pi to become a kiosk.
 
 Using a Raspberry Pi 3 Model B and running NOOBs to install Raspian OS
 
+## Set Time Zone
+
+To correctly set the datetime, taking into account BST etc, run the following: -
+```
+sudo dpkg-reconfigure tzdata
+```
+Set your region and city to correct the date and time
+
+
 ## Install Chromium Web Browser
 
 ```
